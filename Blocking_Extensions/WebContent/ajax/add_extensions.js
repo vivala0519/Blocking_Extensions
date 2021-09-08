@@ -84,6 +84,7 @@ function AddExtension(){
 	var check_spc = /[~!@#$%^&*()_+|<>?:{}]/; // 특수문자체크
 	var check_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/; // 한글체크
 	check_num();
+	var num = $("span").length;
 	// 추가된 확장자 개수 200개 이상 block
 	if(num > 200){
 		alert('200개 이상 추가가 불가합니다.');
