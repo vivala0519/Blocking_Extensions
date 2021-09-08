@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>Blocking_Extensions</display-name>
+  <welcome-file-list>
+    <welcome-file>ajax/add_extensions.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+<servlet>
+	<!-- 서블릿을 불러오기 위해 WAS에게 주는 정보 -->
+	<!-- 1. 배포할 Servlet 2. 해당 Servlet 매핑 URL -->
+	<servlet-name>ajaxCon</servlet-name>
+	<servlet-class>myServlet.Serv</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>ajaxCon</servlet-name>
+   <url-pattern>/ajaxCon</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+   <servlet-name>add</servlet-name>
+   <url-pattern>/add</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>add</servlet-name>
+	<servlet-class>myServlet.add</servlet-class>
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>remove</servlet-name>
+   <url-pattern>/remove</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>remove</servlet-name>
+	<servlet-class>myServlet.remove</servlet-class>
+</servlet>
+  
+</web-app>
